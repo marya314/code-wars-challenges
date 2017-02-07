@@ -12,18 +12,17 @@
 // square the elements in the a array.
 //check to see if those elements appear in b array.
 
-function comp(a, b){
-    // a = [121, 144, 19, 161, 19, 144, 19, 11]
-    // b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+function comp(array1, array2){
 
-    if(a.length !== b.length) {return false};
+    if(array1 === null || array2 === null) {return false};
+    if(array1.length !== array2.length) {return false};
 
-    var sqArray = a.map(el => {return el * el }).sort(function(a,b){return a-b}) // square the first array and sort it
-    var sortedArray = b.sort(function(a,b){return a-b}) // sort the second, already squared array
+    array1 = array1.map(el => {return el * el }).sort((a,b) => a-b); // square the first array and sort it
+    array2 = array2.sort((a,b) => a-b); // sort the second, already squared array
 
     //check the arrays for equal values
-    for(i=0; i<sqArray.length; i++){
-        if (sqArray[i] !== sortedArray[i]) {return false}
+    for(var i=0; i<array1.length; i++){
+        if (array1[i] !== array2[i]) {return false}
     }
 
     return true;
