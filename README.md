@@ -1,2 +1,2 @@
 # code-wars-challenges
- I am trying to do a code wars kata / hacker rank challenge every day. Here are my solutions. 
+My solutions to code wars/hacker rank challenges. 
